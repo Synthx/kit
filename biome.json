@@ -1,0 +1,23 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.6.1/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true
+		}
+	},
+  "files": {
+    "ignore": [
+      "packages/angular/dist",
+      "packages/angular/projects/kit/src/lib/stencil-generated",
+      "packages/core/components",
+      "packages/core/dist",
+      "packages/core/loader",
+      "packages/core/storybook-static",
+      "packages/core/src/components.d.ts"
+    ]
+  }
+}

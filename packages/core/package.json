@@ -1,0 +1,49 @@
+{
+	"name": "@jetpinpin/kit-core",
+	"version": "0.0.5",
+	"description": "Core component library for Kit.",
+	"main": "dist/index.cjs.js",
+	"collection:main": "dist/collection/index.js",
+	"collection": "dist/collection/collection-manifest.json",
+	"types": "dist/types/interfaces.d.ts",
+	"license": "MIT",
+	"homepage": "https://github.com/Synthx/kit",
+	"bugs": {
+		"url": "https://github.com/Synthx/kit/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Synthx/kit.git"
+	},
+	"files": ["components/", "css/", "dist/", "loader/"],
+	"scripts": {
+		"build": "npm run build:style && npx stencil build",
+		"build:style": "sass src/styles:css",
+		"build:storybook": "npm run build && storybook build",
+		"start": "npm run build && storybook dev -p 6006"
+	},
+	"dependencies": {
+		"@stencil/core": "^4.13.0"
+	},
+	"devDependencies": {
+		"@chromatic-com/storybook": "^1.2.25",
+		"@stencil/angular-output-target": "^0.8.4",
+		"@stencil/sass": "^3.0.10",
+		"@storybook/addon-a11y": "^8.0.4",
+		"@storybook/addon-essentials": "^8.0.4",
+		"@storybook/addon-links": "^8.0.4",
+		"@storybook/addon-storysource": "^8.0.4",
+		"@storybook/blocks": "^8.0.4",
+		"@storybook/test": "^8.0.4",
+		"@storybook/web-components": "^8.0.4",
+		"@storybook/web-components-vite": "^8.0.4",
+		"@types/jest": "^29.5.6",
+		"@types/node": "^20.11.28",
+		"jest": "^29.7.0",
+		"jest-cli": "^29.7.0",
+		"lit": "^3.1.2",
+		"puppeteer": "^21.9.0",
+		"sass": "^1.72.0",
+		"storybook": "^8.0.4"
+	}
+}

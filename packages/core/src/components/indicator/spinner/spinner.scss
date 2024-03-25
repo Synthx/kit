@@ -1,0 +1,61 @@
+:host {
+  color: var(--kit-color--primary);
+  display: block;
+  height: 48px;
+  width: 48px;
+}
+
+:host([size="small"]) {
+  height: 32px;
+  width: 32px;
+}
+
+:host([size="large"]) {
+  height: 64px;
+  width: 64px;
+}
+
+svg {
+  fill: none;
+  animation: rotate 1.2s steps(50) infinite;
+
+  circle {
+    &:first-child {
+      stroke: currentcolor;
+    }
+
+    &:last-child {
+      stroke: rgb(251 252 255);
+      animation: dash 1.2s steps(50) infinite;
+      stroke-dasharray: 57;
+      stroke-linecap: round;
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 57;
+    transform: rotateZ(0deg);
+  }
+
+  50%, 75% {
+    stroke-dashoffset: 20;
+    transform: rotateZ(80deg);
+  }
+
+  100% {
+    stroke-dashoffset: 57;
+    transform: rotateZ(360deg);
+  }
+}

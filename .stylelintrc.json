@@ -1,0 +1,14 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-selector-bem-pattern"],
+  "rules": {
+    "color-hex-length": "long",
+    "custom-property-pattern": "kit-.+",
+    "import-notation": "string",
+    "property-no-vendor-prefix": null,
+    "plugin/selector-bem-pattern": {
+      "preset": "bem",
+      "componentName": "[A-Z]+"
+    }
+  }
+}

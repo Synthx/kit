@@ -1,0 +1,21 @@
+{
+  "name": "@jetpinpin/kit-workspace",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/core",
+    "packages/angular"
+  ],
+  "scripts": {
+    "format": "npx @biomejs/biome format ./packages",
+    "lint": "npx @biomejs/biome lint ./packages",
+    "lint:style": "npx stylelint 'packages/**/*.scss'",
+    "check": "npx @biomejs/biome check --apply ./packages"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.6.2",
+    "stylelint": "^16.3.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-selector-bem-pattern": "^4.0.0"
+  }
+}
